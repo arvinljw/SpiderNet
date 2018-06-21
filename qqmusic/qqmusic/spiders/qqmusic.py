@@ -74,11 +74,9 @@ class QQMusic(CrawlSpider):
 
         dissid = each['dissid']
         detail_url = DETAIL_URL % dissid
-
         if detail_url:
             self.detail_header['referer'] = 'https://y.qq.com/n/yqq/playsquare/%s.html' % dissid
-            yield Request(detail_url, headers=self.detail_header, meta={'data': item},
-                          callback=self.parse_detail)
+            yield Request(detail_url, headers=self.detail_header, meta={'data': item}, callback=self.parse_detail)
         else:
             return item
 
@@ -99,10 +97,4 @@ class QQMusic(CrawlSpider):
 
     @staticmethod
     def getTags(cd):
-        tags = cd['tags']
-        temp_tag = ''
-        for tag in tags:
-            temp_tag += tag['name'] + ','
-        if temp_tag and isinstance(temp_tag, str) and len(temp_tag) > 0:
-            temp_tag = temp_tag[0: len(temp_tag) - 1]
-        return temp_tag
+        return ','.join(str(tag['name']) for tag in cd['tags'])

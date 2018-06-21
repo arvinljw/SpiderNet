@@ -4,16 +4,24 @@
 
 ## 目录
 
-* QQ音乐歌单数据
+* [QQ音乐歌单数据爬取分析](https://github.com/arvinljw/SpiderNet/blob/master/qqmusic/README.md)
 * ...
 
 
-## QQ音乐歌单数据
+## LICENSE
 
-[结果数据](https://github.com/arvinljw/SpiderNet/blob/master/qqmusic/music.csv)
+```
+Copyright 2017 arvinljw
 
-这是一个csv文件，可通过excel之类的打开，便可简单的处理数据，例如播放量最高的歌单排行，这里列出播放量前20的歌单：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-![rank](https://upload-images.jianshu.io/upload_images/3157525-da3feb8a9926404e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  http://www.apache.org/licenses/LICENSE-2.0
 
-未完待续...
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
